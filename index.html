@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Meses Mágicos do Inglês</title>
+    <!-- Inclui a biblioteca Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            /* Layout flexível para posicionar o rodapé no final da página */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .main-content {
+            flex-grow: 1; /* Permite que o conteúdo principal ocupe todo o espaço disponível */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+        }
+        .list-style-diamond li::before {
+            content: '♦️';
+            margin-right: 0.5rem;
+            color: #4f46e5;
+        }
+        .list-style-blue-diamond li::before {
+            content: '🔹';
+            margin-right: 0.5rem;
+            color: #4f46e5;
+        }
+        .grid-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .grid-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        /* Classe para esconder telas */
+        .hidden-screen {
+            display: none;
+        }
+        .back-button {
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .back-button:hover {
+            transform: scale(1.05);
+        }
+        /* Estilos para o iframe de vídeo */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .daily-section {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .daily-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Container principal para as telas -->
+    <div class="main-content">
+        <!-- Tela Inicial -->
+        <div id="initial-screen" class="container mx-auto max-w-2xl">
+            <div class="card p-8 md:p-12 text-center">
+
+                <!-- Título e subtítulo -->
+                <header class="mb-8">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">3 Meses Mágicos do Inglês</h1>
+                    <h2 class="mt-2 text-2xl font-bold text-gray-700">O INÍCIO</h2>
+                </header>
+
+                <!-- Seção de explicação do programa -->
+                <div class="text-left text-gray-600 space-y-6">
+                    
+                    <div class="border-l-4 border-indigo-500 pl-4 rounded">
+                        <p class="font-semibold text-lg text-gray-800">Tempo proposto:</p>
+                        <p>12 semanas</p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Rotina proposta:</h3>
+                        <ul class="list-style-diamond space-y-2 text-gray-700">
+                            <li>
+                                <p><strong>Semana de 1 a 4:</strong> 2 horas ao dia</p>
+                                <p class="ml-6">30min - manhã | 30min noite</p>
+                                <p class="ml-6">4 blocos de 15min ao longo dos dias (tempo morto)</p>
+                            </li>
+                            <li>
+                                <p><strong>Semana de 5 a 8:</strong> 3 horas ao dia</p>
+                                <p class="ml-6">40min - manhã | 40min noite</p>
+                                <p class="ml-6">4 blocos de 20min</p>
+                            </li>
+                            <li>
+                                <p><strong>Semana de 9 a 12:</strong> 3h ao dia + 2 filmes por semana</p>
+                                <p class="ml-6">40 min - manhã | 40 noite</p>
+                                <p class="ml-6">4 blocos de 20 min</p>
+                                <p class="ml-6">2 filmes inteiros por semana</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <span class="mr-2 text-indigo-500">🎯</span>
+                            <p class="text-gray-700"><strong>Nível pretendido:</strong> B1.2</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="mr-2 text-indigo-500">⏱️</span>
+                            <p class="text-gray-700"><strong>Horas necessárias durante as 12 semanas:</strong> 330</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="mr-2 text-indigo-500">🗣️</span>
+                            <p class="text-gray-700"><strong>Participação mandatória nos clubes de conversação:</strong> Quinta-feira às 20h | Sábado às 08h</p>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="mr-2 text-indigo-500">🏁</span>
+                            <p class="text-gray-700"><strong>Ponto de partida ideal:</strong> A2.1</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Botão para a próxima tela -->
+                    <div class="mt-8 text-center">
+                        <button id="next-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                            Iniciar
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Tela de Seleção de Blocos de Semanas (inicialmente oculta) -->
+        <div id="week-grid-screen" class="hidden-screen container mx-auto max-w-4xl p-4 md:p-8">
+            <header class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Selecione o Bloco de Semanas</h1>
+                <p class="mt-2 text-lg text-gray-600">Escolha o seu ponto de partida para ver o plano de estudos detalhado.</p>
+            </header>
+
+            <!-- Grid de opções de semanas -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card para a Semana 1 a 4 -->
+                <a href="#" data-target-screen="weeks-1-4-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-500 rounded-full flex items-center justify-center text-3xl font-bold mb-4">
+                        1-4
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semanas 1 a 4</h2>
+                    <p class="text-gray-500 text-sm">2 horas por dia</p>
+                </a>
+
+                <!-- Card para a Semana 5 a 8 -->
+                <a href="#" data-target-screen="weeks-5-8-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <div class="w-16 h-16 bg-purple-100 text-purple-500 rounded-full flex items-center justify-center text-3xl font-bold mb-4">
+                        5-8
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semanas 5 a 8</h2>
+                    <p class="text-gray-500 text-sm">3 horas por dia</p>
+                </a>
+
+                <!-- Card para a Semana 9 a 12 -->
+                <a href="#" data-target-screen="weeks-9-12-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <div class="w-16 h-16 bg-pink-100 text-pink-500 rounded-full flex items-center justify-center text-3xl font-bold mb-4">
+                        9-12
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semanas 9 a 12</h2>
+                    <p class="text-gray-500 text-sm">3 horas por dia + filmes</p>
+                </a>
+
+            </div>
+        </div>
+        
+        <!-- Tela de Seleção de Semanas 1 a 4 (inicialmente oculta) -->
+        <div id="weeks-1-4-screen" class="hidden-screen container mx-auto max-w-4xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="week-grid-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semanas 1 a 4</h1>
+                <p class="mt-2 text-lg text-gray-600">Escolha uma semana para ver o plano de estudos.</p>
+            </header>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" data-target-screen="week-1-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 1</h2>
+                </a>
+                <a href="#" data-target-screen="week-2-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 2</h2>
+                </a>
+                <a href="#" data-target-screen="week-3-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 3</h2>
+                </a>
+                <a href="#" data-target-screen="week-4-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 4</h2>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Tela de Seleção de Semanas 5 a 8 (inicialmente oculta) -->
+        <div id="weeks-5-8-screen" class="hidden-screen container mx-auto max-w-4xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="week-grid-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semanas 5 a 8</h1>
+                <p class="mt-2 text-lg text-gray-600">Escolha uma semana para ver o plano de estudos.</p>
+            </header>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" data-target-screen="week-5-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 5</h2>
+                </a>
+                <a href="#" data-target-screen="week-6-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 6</h2>
+                </a>
+                <a href="#" data-target-screen="week-7-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 7</h2>
+                </a>
+                <a href="#" data-target-screen="week-8-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 8</h2>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tela de Seleção de Semanas 9 a 12 (inicialmente oculta) -->
+        <div id="weeks-9-12-screen" class="hidden-screen container mx-auto max-w-4xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="week-grid-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semanas 9 a 12</h1>
+                <p class="mt-2 text-lg text-gray-600">Escolha uma semana para ver o plano de estudos.</p>
+            </header>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" data-target-screen="week-9-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 9</h2>
+                </a>
+                <a href="#" data-target-screen="week-10-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 10</h2>
+                </a>
+                <a href="#" data-target-screen="week-11-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 11</h2>
+                </a>
+                <a href="#" data-target-screen="week-12-screen" class="grid-card p-6 md:p-8 flex flex-col items-center justify-center text-center">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Semana 12</h2>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tela para a Semana 1 -->
+        <div id="week-1-screen" class="hidden-screen container mx-auto max-w-2xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="weeks-1-4-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semana 1</h1>
+            </header>
+            <div class="card p-6 md:p-8 text-left space-y-6">
+                <!-- Conteúdo para Quinta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Quinta-feira (dia 1)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Início do programa</li>
+                        <li>Participação no Master Club de Inglês</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Sexta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Sexta-feira (dia 2)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Aquecimento</li>
+                        <li>
+                            Leitura simples
+                            <a href="https://learnenglish.britishcouncil.org/skills/reading/a2-reading/invitation-job-interview" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a leitura
+                            </a>
+                        </li>
+                        <li>Vídeo Pequeno</li>
+                    </ul>
+                    <div class="video-container mt-4">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qR19AG8nEGY?si=YiNAPPe7CUZzfdSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Conteúdo para Sábado -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Sábado (dia 3)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Participação no Master Club de Inglês</li>
+                        <li>Vídeo simples</li>
+                    </ul>
+                    <div class="video-container mt-4">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oL9u5fnknkE?si=ZmLFGC6cAvwGLeMV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Conteúdo para Domingo -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Domingo (dia 4)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Descanso - Assistir um filme</li>
+                        <li>(Áudio em Inglês legenda em Português)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela para a Semana 2 -->
+        <div id="week-2-screen" class="hidden-screen container mx-auto max-w-2xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="weeks-1-4-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semana 2</h1>
+                <p class="mt-2 text-lg text-gray-600">Início fase ativa: livro “A hora da estrela”</p>
+            </header>
+            <div class="card p-6 md:p-8 text-left space-y-6">
+                <!-- Conteúdo para Segunda-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Segunda-feira (dia 5)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 14, 15, 16</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                             <iframe width="560" height="315" src="https://www.youtube.com/embed/jya9aCsorYA?si=FuL53BORbZxVdo4N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/oC5nhc_eEH8?si=1RksqJuXCe6DanbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/KX5fApDbiLU?si=Al_VPDq1MScAGT-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/clDUHSsYs6o?si=8SiMHBeN6k1oJTTR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 14, 15, 16, 17</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Terça-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Terça-feira (dia 6)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 17, 18, 19</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/4goFmRMOvf0?si=cQkZI1p0CUoEWCs_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FW9Gq4DbGdw?si=r1EPvRqwzCvvNquu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JVUxBPQgZec?si=v6Rbl6su6j7J5Fec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Qztf93MxxHw?si=MflEzaepXtBQmHVv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 18, 19, 20, 21</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quarta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Quarta-feira (dia 7)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 20, 21, 22</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HQ_OydxjZVU?si=VybKtC7aSjcDbs3B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PXQWO8kJghg?si=UTgiCnQd72ZVvIrO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qnorH-q3RTY?si=ROzsZjEsZK8fi9tq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/CVFbUTjATGc?si=14FY6ibFRMfJrW-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 22, 23, 24, 25</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quinta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Quinta-feira (dia 8)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 23, 24, 25</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/UIxA3N-OG14?si=QKtuW21HXD0WoEbK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/U6CXA27qB80?si=LdoRJUwjjDpCiNdt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gvb02Tnpwpw?si=a4KsncxzP4I9tjYq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ixx8PAA1A0g?si=3Mly0uXBYfK3xxyv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 26, 27, 28, 29</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sexta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Sexta-feira (dia 9)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 26, 27, 28</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vuWhS4nfhSU?si=f5GSFhTetiJ7tb7L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q2ryaQ3bj-I?si=1mixm_nYsDte18jD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q2ryaQ3bj-I?si=1mixm_nYsDte18jD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/GlRJqgzzE8I?si=T7bmI6V62b7Aao0S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 30, 31, 32, 33</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sábado e Domingo -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Sábado (dia 10)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (Meninas Malvadas)</li>
+                    </ul>
+                </div>
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Domingo (dia 11)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Revisa e descansa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela para a Semana 3 -->
+        <div id="week-3-screen" class="hidden-screen container mx-auto max-w-2xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="weeks-1-4-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semana 3</h1>
+            </header>
+            <div class="card p-6 md:p-8 text-left space-y-6">
+                <!-- Conteúdo para Segunda-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Segunda-feira (dia 12)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 29, 30, 31</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/uqsigW9RMoE?si=4d5SyBRHT7h1csUW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MImGAvEr9uI?si=7QMCWvF73zoz-_-p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/87SAsfiA2gE?si=i1BvPTCF4_fgZQA_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/v22eaXkySxg?si=_sWv846MJJVLat_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 34, 35, 36, 37</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Terça-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Terça-feira (dia 13)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 32, 33, 34</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/84dYijIpWjQ?si=jO5YHjPLkDIgfTLl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Vi0_7idqcFI?si=IBNpWnulDPPbx5Hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/H-e-fmsFT8c?si=l-qew6Bc9gQnioZK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/uYLxYV-U6UA?si=2LoGBvXlACCwmjhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 38, 39, 40, 41</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Quarta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Quarta-feira (dia 14)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 35, 36, 37</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TJZOX6X9BQU?si=sp4SwbqNbm-jNBUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/agBlz8DxPQU?si=NVxFIJKaha4xfQr9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/nRzZrufaUWA?si=vIdj0wvDQHeWoicA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUoT89ceuCs?si=I1HhTiIQCpkOKI2p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 42, 43, 44, 45</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quinta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Quinta-feira (dia 15)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30min manhã 📖 pág 38, 39, 40</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7aYArAYghUA?si=8bEKebwyBgcgPCSJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/6iwXwM5hiaY?si=trhzU_fvGDWYo4Ez" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/48jlHaxZnig?si=dCiDaW3Jg0agfOkz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PhBQ4riwDj4?si=D3BAILH48NOh9abz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 46, 47, 48, 49</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sexta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Sexta-feira (dia 16)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 41, 42, 43</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/35lS7gJVTyA?si=MxDPdJ_bO08bNMnZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lS3ddSQLLYs?si=7OWOqGWT8iDCGtp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lwOPaNMTGh8?si=Xk2ljLqe6aM4590i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MQEZX5v4rzg?si=IghR3nWc_U7-I3qx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 50, 51, 52, 53</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sábado e Domingo -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Sábado (dia 17)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (Emoji o filme)</li>
+                    </ul>
+                </div>
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Domingo (dia 18)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Revisa e descansa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela para a Semana 4 -->
+        <div id="week-4-screen" class="hidden-screen container mx-auto max-w-2xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="weeks-1-4-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semana 4</h1>
+            </header>
+            <div class="card p-6 md:p-8 text-left space-y-6">
+                <!-- Conteúdo para Segunda-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Segunda-feira (dia 19)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 44, 45, 46</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sJ_Udumb3ig?si=-lh_f6hHNqgknXJS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/byym9Inpn4A?si=AGdaZY7Hw7btqvhH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PLiWjL5O2rE?si=UFOYLECgTPrFfca3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/5E1ZcNY6TI0?si=PoU7T9DMipKmV5Ob" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 54, 55, 56, 57</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Terça-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Terça-feira (dia 20)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 47, 48, 49</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/c3E-akFRMLk?si=jXXdHWmbu9nskyyB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/cu3A8XsJDqY?si=s3aQ3IW_D9625fp-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/SQdFiov9eZA?si=_vUCFvNSOQi-EofF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-Gpn_06NT9w?si=uRu6_a2iDDBioH6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 58, 59, 60, 61</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quarta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Quarta-feira (dia 21)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 50, 51, 52</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/K2dK1wznsmo?si=pu6yjGAxAPrOKQ3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/aehoGGCHkyw?si=n6T-K-_xClKoLyS6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/pzJeTDPJlcw?si=_e3HXciGxsb1mgD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LN2nbF4wHEM?si=-JISnAtU1JPcfXUe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 62, 63, 64, 65</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quinta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Quinta-feira (dia 22)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 53, 54, 55</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/dt6vJxMa41Q?si=HM0kEnUhXB1c7-Cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wlCz8nkDNqo?si=P-0CSCWdpc2psHAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/tnJtx9q8R0c?si=rspBMpcp8iNOW-oz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Iabo9iuFBEQ?si=PIHtE4FDFuEB1Dg2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 66, 67, 68, 69</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sexta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Sexta-feira (dia 23)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã 📖 pág 56, 57, 58</li>
+                        <li>15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/uiH-pDtFXvo?si=phpkRpvNCFKTgJkn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/u77Es7hdQC4?si=R0vknfe9Rc1QQ093" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/SuUwgZIsw_w?si=nnOyfp1tZc12Jhka" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">15 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/oBzaIa7oZ78?si=G6wRYibHpFj1UgWJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">30 min gramática ⭐️ pág 70, 71, 72, 73</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sábado e Domingo -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Sábado (dia 24)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (De Repente 30)</li>
+                    </ul>
+                </div>
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-diamond">Domingo (dia 25)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Revisa e descansa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela para a Semana 5 -->
+        <div id="week-5-screen" class="hidden-screen container mx-auto max-w-2xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="weeks-5-8-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semana 5</h1>
+                <p class="mt-2 text-lg text-gray-600">Livro 2: ““The Adventures of Tom Sawyer”</p>
+            </header>
+            <div class="card p-6 md:p-8 text-left space-y-6">
+                <!-- Conteúdo para Segunda-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Segunda-feira (dia 4)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>30 min manhã ✍️ Escrita! 
+                            <a href="https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1231/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Gb4mkegS0d4?si=Ps-GC2AJadT3Qs1Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/l32mkUgC27g?si=yY3T5DrXKJUlg6_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HLFlwDMhzEE?si=6Ys5HAdRfziSC-Ah" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/RSRjb4QSrkE?si=WtWcHlCh1xNEerYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 94, 95, 96, 97</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Terça-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Terça-feira (dia 5)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 1</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/E_a78HF4Q1c?si=l96hz_B7Szgk6WZq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FRjNXeZdRH8?si=YCLQj1t4hu01dC7D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/88FMgyUlNqY?si=q69MIv1lPB4yKUZy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/rgIMkhIFqE8?si=aJH86OiZz-v-Mf-z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 98, 99, 100, 101</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quarta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quarta-feira (dia 6)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1227/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/bBxa5uBjQy4?si=uf9rekgYrE1bwyC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/g5NS_rkFL8c?si=4MshrYwMMrY3e8rP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FP7aTBV10jQ?si=vhe7IKaZ6VCnIraI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/N5FX3RxOiRE?si=QePde6t9nLuOBbUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 102, 103, 104, 105</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quinta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quinta-feira (dia 7)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 2</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/rrA_MazD_WA?si=Gc7DvI5ZBtZbtUEf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/pHI1wtGtFHY?si=yqFjZiELKJ4M8R-T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ECjsSFwHlZk?si=ub4wiIr8-GgKtjVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/D77XPfUxaNs?si=RY58An5QwAJFcNxV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 106, 107, 108, 109</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sexta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sexta-feira (dia 8)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1221/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sBtr2RpDAas?si=-RddrdryyIIn67Tg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/esqxYO5vsEI?si=f9uBIhY5gUXiuqT2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/esqxYO5vsEI?si=f9uBIhY5gUXiuqT2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ImE_fNTXN34?si=UCTfriv-hqc2Dm1O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 110, 111, 112, 113</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sábado e Domingo -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sábado (dia 9)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (Para todos os garotos que já amei) + Leitura leve a noite (livre)</li>
+                    </ul>
+                </div>
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Domingo (dia 10)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Descansa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela para a Semana 7 -->
+        <div id="week-7-screen" class="hidden-screen container mx-auto max-w-2xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="weeks-5-8-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semana 7</h1>
+            </header>
+            <div class="card p-6 md:p-8 text-left space-y-6">
+                <!-- Conteúdo para Segunda-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Segunda-feira (dia 18)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1138/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/9e2wvrnXKC0?si=dpevzWQKz61owDuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qPQ8cxcSaX0?si=TC-0coDFJme5K-QI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/RTQe7o_QEGE?si=GhCJ_jqBrW6Jkf4S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Vq0XVChDi5Y?si=4Mva3-JQ1iJxunmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 134, 135, 136, 137</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Terça-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Terça-feira (dia 19)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 5 e 6</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/iRzTaHCDXfY?si=2MSz9cfMQZ7EDrfm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/LTBZH8vSiGY?si=YNPfflejMSCU8PHW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sA1OY0Mdu-U?si=3MgU2NjQlnOmBz5-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OI1xfNeRESY?si=gHxeKyjA3Iby7NJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 138, 139, 140, 141</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quarta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quarta-feira (dia 20)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1121/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Lkaa2uTSXkY?si=B-cK6QDPtlGN8QdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/beav1cWGu7A?si=FfyJOez5V5QzrONM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JEm0XHOs_JI?si=ZnqkKJtBdha4PY3T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/FXjHwQ6J_yI?si=qspM_mQNdB-rMX2u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 142, 143, 144, 145</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quinta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quinta-feira (dia 21)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 6 e 7</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ooe7LK4P-7I?si=zN4Euw9Dz7Qba6mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ku1ht_ZAU-w?si=CmcqRdVakmUwznPj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/VFRzeYCk8MI?si=FZgPlWTt8RCHI2dJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TlwkU9E1zsA?si=GfGjRteDGxqZu9uF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 146, 147, 148, 149</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sexta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sexta-feira (dia 22)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1115/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/d8-oxhMPwm8?si=WYG2XOyyfCM3UrVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EKNSmpYz82k?si=81v7cOIyP8B88rtR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/IitIl2C3Iy8?si=dkVFRWqHX9SINiKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/U51myW8o1YA?si=YvByWDL5c8yhoPnm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 150, 151, 152, 153</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sábado e Domingo -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sábado (dia 23)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (Ícaro) + Leitura leve a noite (livre)</li>
+                    </ul>
+                </div>
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Domingo (dia 24)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Descansa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela para a Semana 8 -->
+        <div id="week-8-screen" class="hidden-screen container mx-auto max-w-2xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="weeks-5-8-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semana 8</h1>
+            </header>
+            <div class="card p-6 md:p-8 text-left space-y-6">
+                <!-- Conteúdo para Segunda-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Segunda-feira (dia 25)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1109/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/C-_-XUSJtjI?si=G8vvXVUJKjiMhJUJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Cw-_bKe9h9U?si=-PRZ-MbvV8MBMYZ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/oOnl76UqUcw?si=pEy_FbAjAjyheY0j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OlC9gC-7vRE?si=3-H_baSI-xJXc5Tb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 154, 155, 156, 157</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Terça-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Terça-feira (dia 26)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 8 e 9</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/oDJ0dRb4-XY?si=kMaO678YCkYjhLp5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/39Zcwc4lr08?si=CDBddpi8O0HXUbVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Hl_Pkewu2QE?si=cqHUFjlzTw4mbAx_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Fag9NmG8jn8?si=BjIqP0CA7YQKGz08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 158, 159, 160, 161</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quarta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quarta-feira (dia 27)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1072/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zevt2blQyVs?si=TuHK253TAPK1Thmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YtdDOfO7hC0?si=9khdSZX3COmNwX0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/9i2XRVolFzg?si=TZxR9Mf-xldfV2SW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/9h-I5yCHrS0?si=vLH1v6vtY852XIcJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 162, 163, 164, 165</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quinta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quinta-feira (dia 28)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 10 e 11</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2XStJKw5L4M?si=qPJVtdW649Iqcby8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/dpC2jGqu4G0?si=gsXj4FVakibhOD9O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/6Cq4UGibpQY?si=TOhoIy_57eU3l2GI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/K-HFYSjPlGY?si=CO9sTqZ2s_wfEE8l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ 166, 167, 168, 169</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sexta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sexta-feira (dia 29)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1053/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vZT-bB66iIk?si=d8gSbwNPD9x3Pov7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/m-8tQ_TYLgk?si=us8UdVjVSZSl-v8v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/CUcWEDxyZKA?si=cRTHLB8y10otX_gE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wDshG3HYbuI?si=3NITQ8YPd-0OPkAd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 170, 171, 172, 173</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sábado e Domingo -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sábado (dia 30)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (13th) + Leitura leve a noite (livre)</li>
+                    </ul>
+                </div>
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Domingo (dia 31)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Descansa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nova tela para a Semana 9 -->
+        <div id="week-9-screen" class="hidden-screen container mx-auto max-w-2xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="weeks-9-12-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semana 9</h1>
+            </header>
+            <div class="card p-6 md:p-8 text-left space-y-6">
+                <!-- Conteúdo para Segunda-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Segunda-feira (dia 1)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1232/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qzqLBdKR4oo?si=3jQVeYZv9FwsQ2Mr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/as6l3Nw5eSs?si=TLoBmQLDo2RZzKEG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/3Gj2EGaLbrk?si=wNAssUeecdrmyl-m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_HomSxvEl24?si=q93qu3Xb1frhZV0B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 174 até 181</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Terça-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Terça-feira (dia 2)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 12, 13 e 14</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/W1kuA2GuXks?si=PUm7aoKv84ClyAGP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/3lL377hQh8Y?si=cjCMpKadlqCDjsPK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jlKVRv9W1ns?si=J2ddI8h_DVHCNLo_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/iyeUvvvLExw?si=3T6c8jNupXiuzwJC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 182 até 189</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quarta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quarta-feira (dia 3)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1230/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/hOAsUNNyPIs?si=Wq2iJvIwJhAaIEkR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/d6ou1eTJH3I?si=WbYTrxa380VYj-w6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Sgwl1MLWSPw?si=G9f_lydu3MRrkBjn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2eT8vAGTmfM?si=KJqtW1qE-z45hIyi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 190 até 197</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quinta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quinta-feira (dia 4)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 15,16 e 17</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/UGjn_yzYYk8?si=hB-4Y3nCVn0Svsh1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ojvgT62XtpY?si=ZTpNIa3ITYzH0n_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/G8Y2liwGRl8?si=yNc2lG1gccA2VGgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/8qIlSAzfBY4?si=fc1zB-1eCaTVgt8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 198 até 205</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sexta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sexta-feira (dia 5)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1222/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ELxGmf9f_ZM?si=Z03TNA6n7fJo_zB6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/bbDliT5EN-w?si=vY1m0U0P-JBnSZj_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DSA9G8vaXY0?si=GJMcd4MdT341jGDm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qOYwgKd7VSE?si=3U8PeQTu-opqjRSl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 206 até 213</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sábado e Domingo -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sábado (dia 6)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (A Barraca do Beijo)</li>
+                    </ul>
+                </div>
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Domingo (dia 7)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (Pegando Fogo)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nova tela para a Semana 12 -->
+        <div id="week-12-screen" class="hidden-screen container mx-auto max-w-2xl p-4 md:p-8">
+            <button class="back-button mb-6 text-gray-600 hover:text-gray-800 flex items-center" data-back-to="weeks-9-12-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Voltar
+            </button>
+            <header class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800">Semana 12</h1>
+            </header>
+            <div class="card p-6 md:p-8 text-left space-y-6">
+                <!-- Conteúdo para Segunda-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Segunda-feira (dia 22)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1129/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/9-xTH7r_QNQ?si=7c2q8WiIalG4ILhn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/L6Gp3Gv7QbA?si=sM0UoMMbqectc-dX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/L6Gp3Gv7QbA?si=tkJA3mu4GW7boC4m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/L6Gp3Gv7QbA?si=tkJA3mu4GW7boC4m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 294 até 301</li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Terça-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Terça-feira (dia 23)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 30, 31 e 33</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/2zO9sDECeS8?si=oV2edXhImbZYimk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HA7qCN_MIRw?si=7Sv4fOz2ybP-Fe6F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yMEc2hlI-Jk?si=MCD1mXpy2q873uiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zWtQYVt-zHg?si=3FuyDhO9lSlK2F1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática ⭐️ pág 302 e 303</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quarta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quarta-feira (dia 24)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita!
+                            <a href="https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1093/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qNRNFP0qSX0?si=Qb1h-vkXUV5AP31F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xF_Q2anYOfc?si=Xx9HJgizpQNd88q-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gT6dPUULwkQ?si=prWq0FGAzokwpifR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wv_nEUnhFFE?si=VcxuvHObsFGfRxZG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática
+                            <a href="https://www.englishcoursemalta.com/learn/grammar-test-b1-intermediate/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para o teste
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo para Quinta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Quinta-feira (dia 25)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã 📕 cap 33, 34 e 35</li>
+                        <li>20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-tqeI9t4x9E?si=UPtJBfryHV21FxGB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/EdeZp0n0JHw?si=IUi4koh6e7zYIx9K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/nSg3F-vJ2ZQ?si=yyIVtTEG3OX717gt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/C_hQG67siQ4?si=Pm5SxE7djz2xvkHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática
+                            <a href="https://www.oxfordonlineenglish.com/english-level-test/grammar" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para o teste
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sexta-feira -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sexta-feira (dia 26)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>40 min manhã ✍️ Escrita
+                            <a href="https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1074/" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para a escrita
+                            </a>
+                        </li>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yp_tgX15Qzk?si=z6svdJiHyeAJjZgi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q_rgIWRFjqI?si=Gu6PDoJ4slHzFlqh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7wgJQdCvwDM?si=lEF7zE7Z5PQv7mn5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">20 min - audio</li>
+                        <div class="video-container mt-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WhlAGh3lQsE?si=V5OXJ35_wuppT5xl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <li class="mt-4">40 min gramática
+                            <a href="https://www.youtube.com/watch?v=yp_tgX15Qzk" target="_blank" class="block w-full mt-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                                Ir para o vídeo
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Conteúdo para Sábado e Domingo -->
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Sábado (dia 27)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (A Mãe)</li>
+                    </ul>
+                </div>
+                <div class="daily-section">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 list-style-blue-diamond">Domingo (dia 28)</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Filme (Nunca Mais)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="mt-12 text-center text-gray-500 text-sm w-full py-4 px-2">
+        <p>&copy; 2024 Plano de Estudos Interativo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Obtém referências a todas as telas
+        const initialScreen = document.getElementById('initial-screen');
+        const weekGridScreen = document.getElementById('week-grid-screen');
+        const weeks14Screen = document.getElementById('weeks-1-4-screen');
+        const weeks58Screen = document.getElementById('weeks-5-8-screen');
+        const weeks912Screen = document.getElementById('weeks-9-12-screen');
+        const week1Screen = document.getElementById('week-1-screen');
+        const week2Screen = document.getElementById('week-2-screen');
+        const week3Screen = document.getElementById('week-3-screen');
+        const week4Screen = document.getElementById('week-4-screen');
+        const week5Screen = document.getElementById('week-5-screen');
+        const week6Screen = document.getElementById('week-6-screen');
+        const week7Screen = document.getElementById('week-7-screen');
+        const week8Screen = document.getElementById('week-8-screen');
+        const week9Screen = document.getElementById('week-9-screen');
+        const week10Screen = document.getElementById('week-10-screen');
+        const week11Screen = document.getElementById('week-11-screen');
+        const week12Screen = document.getElementById('week-12-screen');
+
+        // Obtém o botão de iniciar
+        const nextButton = document.getElementById('next-button');
+
+        // Obtém todos os links dos cards da tela de seleção de blocos
+        const weekBlockLinks = document.querySelectorAll('#week-grid-screen a');
+        
+        // Obtém todos os links das semanas na tela de seleção 1-4
+        const weeks14Links = document.querySelectorAll('#weeks-1-4-screen a');
+
+        // Obtém todos os links das semanas na tela de seleção 5-8
+        const weeks58Links = document.querySelectorAll('#weeks-5-8-screen a');
+
+        // Obtém todos os links das semanas na tela de seleção 9-12
+        const weeks912Links = document.querySelectorAll('#weeks-9-12-screen a');
+        
+        // Obtém todos os botões de voltar
+        const backButtons = document.querySelectorAll('.back-button');
+
+        // Função para mostrar uma tela específica e esconder as outras
+        function showScreen(screenToShow) {
+            const allScreens = [initialScreen, weekGridScreen, weeks14Screen, weeks58Screen, weeks912Screen, week1Screen, week2Screen, week3Screen, week4Screen, week5Screen, week6Screen, week7Screen, week8Screen, week9Screen, week10Screen, week11Screen, week12Screen];
+            allScreens.forEach(screen => {
+                screen.classList.add('hidden-screen');
+            });
+            screenToShow.classList.remove('hidden-screen');
+        }
+
+        // Adiciona um listener para o botão de Iniciar
+        nextButton.addEventListener('click', () => {
+            showScreen(weekGridScreen);
+        });
+
+        // Adiciona listeners para os links dos blocos de semanas
+        weekBlockLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Impede a navegação padrão
+                const targetScreenId = link.getAttribute('data-target-screen');
+                const targetScreen = document.getElementById(targetScreenId);
+                if (targetScreen) {
+                    showScreen(targetScreen);
+                }
+            });
+        });
+        
+        // Adiciona listeners para os links das semanas 1-4
+        weeks14Links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetScreenId = link.getAttribute('data-target-screen');
+                const targetScreen = document.getElementById(targetScreenId);
+                if (targetScreen) {
+                    showScreen(targetScreen);
+                }
+            });
+        });
+
+        // Adiciona listeners para os links das semanas 5-8
+        weeks58Links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetScreenId = link.getAttribute('data-target-screen');
+                const targetScreen = document.getElementById(targetScreenId);
+                if (targetScreen) {
+                    showScreen(targetScreen);
+                }
+            });
+        });
+
+        // Adiciona listeners para os links das semanas 9-12
+        weeks912Links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetScreenId = link.getAttribute('data-target-screen');
+                const targetScreen = document.getElementById(targetScreenId);
+                if (targetScreen) {
+                    showScreen(targetScreen);
+                }
+            });
+        });
+        
+        // Adiciona listeners para os botões de Voltar
+        backButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetScreenId = button.getAttribute('data-back-to');
+                const targetScreen = document.getElementById(targetScreenId);
+                if (targetScreen) {
+                    showScreen(targetScreen);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
