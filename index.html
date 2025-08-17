@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Meses Mágicos do Inglês</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #6366f1;
+            color: white;
+            padding: 1rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            text-align: center;
+        }
+        .btn {
+            background-color: #6366f1;
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .link-btn {
+            background-color: #22c55e;
+        }
+        .link-btn:hover {
+            background-color: #16a34a;
+        }
+        .card {
+            background-color: #e0e7ff;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #c7d2fe;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .card-title {
+            color: #3730a3;
+            font-weight: 700;
+        }
+        .card-item {
+            display: flex;
+            align-items: center;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .card-item input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        .card-item .activity-content {
+            flex-grow: 1;
+        }
+        .card-item .activity-content a.activity-link {
+            text-decoration: underline;
+            color: #3730a3;
+        }
+        .youtube-video {
+            width: 100%;
+            height: 200px; /* Adjusted for better mobile view */
+            margin-top: 0.5rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .back-btn {
+            background-color: #9ca3af;
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            background-color: #6b7280;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div id="app" class="container">
+        <!-- O conteúdo será renderizado aqui pelo JavaScript -->
+    </div>
+
+    <script>
+        // Dados do plano de estudos
+        const weeks = [
+            {
+                id: 1,
+                title: "SEMANA 1",
+                intro: "Fase de aquecimento. Foco em leitura, vídeos e participação em clubes.",
+                days: [
+                    { day: "Quinta-feira", date: "dia 1", activities: [
+                        { type: "text", content: "Início do programa" },
+                        { type: "text", content: "Participação no Master Club de Inglês" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 2", activities: [
+                        { type: "text", content: "Aquecimento" },
+                        { type: "link", content: "Leitura simples", url: "https://learnenglish.britishcouncil.org/skills/reading/a2-reading/invitation-job-interview" },
+                        { type: "video", content: "Video Pequeno", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/qR19AG8nEGY?si=YiNAPPe7CUZzfdSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' }
+                    ]},
+                    { day: "Sábado", date: "dia 3", activities: [
+                        { type: "text", content: "Participação no clube da manhã" },
+                        { type: "video", content: "Video Pequeno", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/oL9u5fnknkE?si=ZmLFGC6cAvwGLeMV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' }
+                    ]},
+                    { day: "Domingo", date: "dia 4", activities: [
+                        { type: "text", content: "Descanso - Assistir um filme (Áudio em Inglês legenda em Português)" }
+                    ]}
+                ]
+            },
+            {
+                id: 2,
+                title: "SEMANA 2",
+                intro: 'Início fase ativa: livro “A hora da estrela”',
+                days: [
+                    { day: "Segunda-feira", date: "dia 5", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 14, 15, 16" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/jya9aCsorYA?si=FuL53BORbZxVdo4N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/oC5nhc_eEH8?si=1RksqJuXCe6DanbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/KX5fApDbiLU?si=Al_VPDq1MScAGT-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/clDUHSsYs6o?si=8SiMHBeN6k1oJTTR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 14, 15, 16, 17" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 6", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 17, 18, 19" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/4goFmRMOvf0?si=cQkZI1p0CUoEWCs_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/FW9Gq4DbGdw?si=r1EPvRqwzCvvNquu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/JVUxBPQgZec?si=v6Rbl6su6j7J5Fec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Qztf93MxxHw?si=MflEzaepXtBQmHVv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 18, 19, 20, 21" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 7", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 20, 21, 22" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/HQ_OydxjZVU?si=VybKtC7aSjcDbs3B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/PXQWO8kJghg?si=UTgiCnQd72ZVvIrO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/qnorH-q3RTY?si=ROzsZjEsZK8fi9tq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/CVFbUTjATGc?si=14FY6ibFRMfJrW-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 22, 23, 24, 25" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 8", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 23, 24, 25" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/UIxA3N-OG14?si=QKtuW21HXD0WoEbK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/U6CXA27qB80?si=LdoRJUwjjDpCiNdt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/gvb02Tnpwpw?si=a4KsncxzP4I9tjYq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ixx8PAA1A0g?si=3Mly0uXBYfK3xxyv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 26, 27, 28, 29" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 9", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 26, 27, 28" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/vuWhS4nfhSU?si=f5GSFhTetiJ7tb7L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Q2ryaQ3bj-I?si=1mixm_nYsDte18jD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Q2ryaQ3bj-I?si=1mixm_nYsDte18jD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/GlRJqgzzE8I?si=T7bmI6V62b7Aao0S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 30, 31, 32, 33" }
+                    ]},
+                    { day: "Sábado", date: "dia 10", activities: [
+                        { type: "text", content: "Filme (Meninas Malvadas)" }
+                    ]},
+                    { day: "Domingo", date: "dia 11", activities: [
+                        { type: "text", content: "Revisa e descansa" }
+                    ]}
+                ]
+            },
+            {
+                id: 3,
+                title: "SEMANA 3",
+                intro: "Aprofundando nos estudos do livro 1.",
+                days: [
+                    { day: "Segunda-feira", date: "dia 12", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 29, 30, 31" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/uqsigW9RMoE?si=4d5SyBRHT7h1csUW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/MImGAvEr9uI?si=7QMCWvF73zoz-_-p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/87SAsfiA2gE?si=i1BvPTCF4_fgZQA_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/v22eaXkySxg?si=_sWv846MJJVLat_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 34, 35, 36, 37" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 13", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 32, 33, 34" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/84dYijIpWjQ?si=jO5YHjPLkDIgfTLl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Vi0_7idqcFI?si=IBNpWnulDPPbx5Hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/H-e-fmsFT8c?si=l-qew6Bc9gQnioZK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/uYLxYV-U6UA?si=2LoGBvXlACCwmjhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 38, 39, 40, 41" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 14", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 35, 36, 37" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/TJZOX6X9BQU?si=sp4SwbqNbm-jNBUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/agBlz8DxPQU?si=NVxFIJKaha4xfQr9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/nRzZrufaUWA?si=vIdj0wvDQHeWoicA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ZUoT89ceuCs?si=I1HhTiIQCpkOKI2p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 42, 43, 44, 45" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 15", activities: [
+                        { type: "text", content: "30min manhã 📖 pág 38, 39, 40" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/7aYArAYghUA?si=8bEKebwyBgcgPCSJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/6iwXwM5hiaY?si=trhzU_fvGDWYo4Ez" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/48jlHaxZnig?si=dCiDaW3Jg0agfOkz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/PhBQ4riwDj4?si=D3BAILH48NOh9abz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 46, 47, 48, 49" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 16", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 41, 42, 43" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/35lS7gJVTyA?si=MxDPdJ_bO08bNMnZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/lS3ddSQLLYs?si=7OWOqGWT8iDCGtp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/lwOPaNMTGh8?si=Xk2ljLqe6aM4590i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/MQEZX5v4rzg?si=IghR3nWc_U7-I3qx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 50, 51, 52, 53" }
+                    ]},
+                    { day: "Sábado", date: "dia 17", activities: [
+                        { type: "text", content: "Filme (Emoji o filme)" }
+                    ]},
+                    { day: "Domingo", date: "dia 18", activities: [
+                        { type: "text", content: "Revisa e descansa" }
+                    ]}
+                ]
+            },
+            {
+                id: 4,
+                title: "SEMANA 4",
+                intro: "Finalizando o primeiro livro.",
+                days: [
+                    { day: "Segunda-feira", date: "dia 19", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 44, 45, 46" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/sJ_Udumb3ig?si=-lh_f6hHNqgknXJS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/byym9Inpn4A?si=AGdaZY7Hw7btqvhH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/PLiWjL5O2rE?si=UFOYLECgTPrFfca3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/5E1ZcNY6TI0?si=PoU7T9DMipKmV5Ob" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 54, 55, 56, 57" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 20", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 47, 48, 49" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/c3E-akFRMLk?si=jXXdHWmbu9nskyyB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/cu3A8XsJDqY?si=s3aQ3IW_D9625fp-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/SQdFiov9eZA?si=_vUCFvNSOQi-EofF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/-Gpn_06NT9w?si=uRu6_a2iDDBioH6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 58, 59, 60, 61" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 21", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 50, 51, 52" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/K2dK1wznsmo?si=pu6yjGAxAPrOKQ3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/aehoGGCHkyw?si=n6T-K-_xClKoLyS6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/pzJeTDPJlcw?si=_e3HXciGxsb1mgD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/LN2nbF4wHEM?si=-JISnAtU1JPcfXUe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 62, 63, 64, 65" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 22", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 53, 54, 55" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/dt6vJxMa41Q?si=HM0kEnUhXB1c7-Cm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/wlCz8nkDNqo?si=P-0CSCWdpc2psHAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/tnJtx9q8R0c?si=rspBMpcp8iNOW-oz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Iabo9iuFBEQ?si=PIHtE4FDFuEB1Dg2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 66, 67, 68, 69" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 23", activities: [
+                        { type: "text", content: "30 min manhã 📖 pág 56, 57, 58" },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/uiH-pDtFXvo?si=phpkRpvNCFKTgJkn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/u77Es7hdQC4?si=R0vknfe9Rc1QQ093" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/SuUwgZIsw_w?si=nnOyfp1tZc12Jhka" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "15 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/oBzaIa7oZ78?si=G6wRYibHpFj1UgWJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "30 min gramática ⭐️ pág 70, 71, 72, 73" }
+                    ]},
+                    { day: "Sábado", date: "dia 24", activities: [
+                        { type: "text", content: "Filme (De Repente 30)" }
+                    ]},
+                    { day: "Domingo", date: "dia 25", activities: [
+                        { type: "text", content: "Revisa e descansa", },
+                        { type: "text", content: "FIM DO PRIMEIRO LIVRO" }
+                    ]}
+                ]
+            },
+            {
+                id: 5,
+                title: "SEMANA 5",
+                intro: 'Início do Livro 2: "The Adventures of Tom Sawyer".',
+                days: [
+                    { day: "Segunda-feira", date: "dia 4", activities: [
+                        { type: "text", content: "30 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1231/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Gb4mkegS0d4?si=Ps-GC2AJadT3Qs1Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/l32mkUgC27g?si=yY3T5DrXKJUlg6_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/HLFlwDMhzEE?si=6Ys5HAdRfziSC-Ah" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/RSRjb4QSrkE?si=WtWcHlCh1xNEerYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 94, 95, 96, 97" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 5", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 1" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/E_a78HF4Q1c?si=l96hz_B7Szgk6WZq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/FRjNXeZdRH8?si=YCLQj1t4hu01dC7D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/88FMgyUlNqY?si=q69MIv1lPB4yKUZy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/rgIMkhIFqE8?si=aJH86OiZz-v-Mf-z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pag 98, 99, 100, 101" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 6", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1227/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/bBxa5uBjQy4?si=uf9rekgYrE1bwyC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/g5NS_rkFL8c?si=4MshrYwMMrY3e8rP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/FP7aTBV10jQ?si=vhe7IKaZ6VCnIraI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/N5FX3RxOiRE?si=QePde6t9nLuOBbUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️102, 103, 104, 105" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 7", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 2" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/rrA_MazD_WA?si=Gc7DvI5ZBtZbtUEf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/pHI1wtGtFHY?si=yqFjZiELKJ4M8R-T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ECjsSFwHlZk?si=ub4wiIr8-GgKtjVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/D77XPfUxaNs?si=RY58An5QwAJFcNxV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 106, 107, 108, 109)" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 8", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1221/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/sBtr2RpDAas?si=-RddrdryyIIn67Tg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/esqxYO5vsEI?si=f9uBIhY5gUXiuqT2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/esqxYO5vsEI?si=f9uBIhY5gUXiuqT2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ImE_fNTXN34?si=UCTfriv-hqc2Dm1O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 110, 111, 112, 113" }
+                    ]},
+                    { day: "Sábado", date: "dia 9", activities: [
+                        { type: "text", content: "Filme (Para todos os garotos que já amei) + Leitura leve a noite (livre)" }
+                    ]},
+                    { day: "Domingo", date: "dia 10", activities: [
+                        { type: "text", content: "Descansa" }
+                    ]}
+                ]
+            },
+            {
+                id: 6,
+                title: "SEMANA 6",
+                intro: "Continuação do estudo do livro 2.",
+                days: [
+                    { day: "Segunda-feira", date: "dia 11", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1212/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/iXCmoQDEoe4?si=eeMnRxWiZZO9lRLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Tuynqg8Vp-A?si=m__PaadsYKS8uwhO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/y6FDBDGNYFc?si=63XCe_F-rHS_C5-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/1E7BoJQf050?si=zgEBtp6bVTRHCPxy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 114, 115, 116, 117" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 12", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 3" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/LPGGIdxOmWI?si=c8HcHE2bFC_xNoz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/PWCtoVt1CJM?si=Sn59UwvawnXsu-qJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/XREwNCq9ukI?si=-_UdR2PsYoJ5a_NG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Omp3X-FXdLs?si=tBnlUani-X8jDAsJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 118, 119, 120, 121" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 13", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1205/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/dxSo6710HD8?si=tukeIpg99XWyPpHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/0Ir6_0a6P7M?si=Zgz2ZplsNMmwzTB-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/rxlwkPjyxGI?si=Ir32LKtwtUNnNg1y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/hdM69Fz9lLA?si=-Pr6oJudCnCOkbvy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 122, 123, 124, 125" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 14", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 4" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/DMHMOQ_054U?si=4u5MDTZzmJVGQZWl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Hq0nzof6Go8?si=9uztvhsSSHwwpiK6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/vvmCqX9flb8?si=Lzr29P99_U1vP16J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/3C0avY6S0Yk?si=TNGHHfNn4Hk3C6TW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 126, 127, 128, 129" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 15", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1174/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/NGy1o4jLkJc?si=Ofqos6524IvkiuyT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/NNArksLD3bE?si=rECVXPT4vXrqxCRX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Xa0udNfCztM?si=1DJiqndbHs5HKZH6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/8bcIM4jo8fc?si=uJ_wN1GKoS-ur1oE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 130, 131, 132, 133" }
+                    ]},
+                    { day: "Sábado", date: "dia 16", activities: [
+                        { type: "text", content: "Filme (Extraordinário) + Leitura leve a noite (Livre)" }
+                    ]},
+                    { day: "Domingo", date: "dia 17", activities: [
+                        { type: "text", content: "Descansa" }
+                    ]}
+                ]
+            },
+            {
+                id: 7,
+                title: "SEMANA 7",
+                intro: "Aprofundando a leitura e escrita.",
+                days: [
+                    { day: "Segunda-feira", date: "dia 18", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1138/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/9e2wvrnXKC0?si=dpevzWQKz61owDuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/qPQ8cxcSaX0?si=TC-0coDFJme5K-QI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/RTQe7o_QEGE?si=GhCJ_jqBrW6Jkf4S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Vq0XVChDi5Y?si=4Mva3-JQ1iJxunmp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 134, 135, 136, 137" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 19", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 5 e 6" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/iRzTaHCDXfY?si=2MSz9cfMQZ7EDrfm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/LTBZH8vSiGY?si=YNPfflejMSCU8PHW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/sA1OY0Mdu-U?si=3MgU2NjQlnOmBz5-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/OI1xfNeRESY?si=gHxeKyjA3Iby7NJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 138, 139, 140, 141" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 20", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1121/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Lkaa2uTSXkY?si=B-cK6QDPtlGN8QdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/beav1cWGu7A?si=FfyJOez5V5QzrONM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/JEm0XHOs_JI?si=ZnqkKJtBdha4PY3T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/FXjHwQ6J_yI?si=qspM_mQNdB-rMX2u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 142, 143, 144, 145" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 21", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 6 e 7" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ooe7LK4P-7I?si=zN4Euw9Dz7Qba6mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ku1ht_ZAU-w?si=CmcqRdVakmUwznPj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/VFRzeYCk8MI?si=FZgPlWTt8RCHI2dJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/TlwkU9E1zsA?si=GfGjRteDGxqZu9uF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 146, 147, 148, 149" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 22", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1115/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/d8-oxhMPwm8?si=WYG2XOyyfCM3UrVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/EKNSmpYz82k?si=81v7cOIyP8B88rtR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/IitIl2C3Iy8?si=dkVFRWqHX9SINiKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/U51myW8o1YA?si=YvByWDL5c8yhoPnm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 150, 151, 152, 153" }
+                    ]},
+                    { day: "Sábado", date: "dia 23", activities: [
+                        { type: "text", content: "Filme (Ícaro) + Leitura leve a noite (livre)" }
+                    ]},
+                    { day: "Domingo", date: "dia 24", activities: [
+                        { type: "text", content: "Descansa" }
+                    ]}
+                ]
+            },
+            {
+                id: 8,
+                title: "SEMANA 8",
+                intro: "Reta final do Livro 2.",
+                days: [
+                    { day: "Segunda-feira", date: "dia 25", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1109/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/C-_-XUSJtjI?si=G8vvXVUJKjiMhJUJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Cw-_bKe9h9U?si=-PRZ-MbvV8MBMYZ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/oOnl76UqUcw?si=pEy_FbAjAjyheY0j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/OlC9gC-7vRE?si=3-H_baSI-xJXc5Tb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 154, 155, 156, 157" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 26", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 8 e 9" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/oDJ0dRb4-XY?si=kMaO678YCkYjhLp5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/39Zcwc4lr08?si=CDBddpi8O0HXUbVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Hl_Pkewu2QE?si=cqHUFjlzTw4mbAx_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Fag9NmG8jn8?si=BjIqP0CA7YQKGz08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 158, 159, 160, 161" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 27", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1072/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Zevt2blQyVs?si=TuHK253TAPK1Thmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/YtdDOfO7hC0?si=9khdSZX3COmNwX0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/9i2XRVolFzg?si=TZxR9Mf-xldfV2SW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/9h-I5yCHrS0?si=vLH1v6vtY852XIcJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 162, 163, 164, 165" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 28", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 10 e 11" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/2XStJKw5L4M?si=qPJVtdW649Iqcby8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/dpC2jGqu4G0?si=gsXj4FVakibhOD9O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/6Cq4UGibpQY?si=TOhoIy_57eU3l2GI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/K-HFYSjPlGY?si=CO9sTqZ2s_wfEE8l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 166, 167, 168, 169" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 29", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/academic_writing_samples_task_1/1053/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/vZT-bB66iIk?si=d8gSbwNPD9x3Pov7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/m-8tQ_TYLgk?si=us8UdVjVSZSl-v8v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/CUcWEDxyZKA?si=cRTHLB8y10otX_gE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/wDshG3HYbuI?si=3NITQ8YPd-0OPkAd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ 170, 171, 172, 173" }
+                    ]},
+                    { day: "Sábado", date: "dia 30", activities: [
+                        { type: "text", content: "Filme (13th) + Leitura leve a noite (livre)" }
+                    ]},
+                    { day: "Domingo", date: "dia 31", activities: [
+                        { type: "text", content: "Descansa" }
+                    ]}
+                ]
+            },
+            {
+                id: 9,
+                title: "SEMANA 9",
+                intro: "Começando a terceira fase de estudos, com filmes.",
+                days: [
+                    { day: "Segunda-feira", date: "dia 1", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1232/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/qzqLBdKR4oo?si=3jQVeYZv9FwsQ2Mr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/as6l3Nw5eSs?si=TLoBmQLDo2RZzKEG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/3Gj2EGaLbrk?si=wNAssUeecdrmyl-m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/_HomSxvEl24?si=q93qu3Xb1frhZV0B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 174 até 181" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 2", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 12, 13 e 14" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/W1kuA2GuXks?si=PUm7aoKv84ClyAGP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/3lL377hQh8Y?si=cjCMpKadlqCDjsPK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/jlKVRv9W1ns?si=J2ddI8h_DVHCNLo_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/iyeUvvvLExw?si=3T6c8jNupXiuzwJC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 182 até 189" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 3", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1230/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/hOAsUNNyPIs?si=Wq2iJvIwJhAaIEkR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/d6ou1eTJH3I?si=WbYTrxa380VYj-w6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Sgwl1MLWSPw?si=G9f_lydu3MRrkBjn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/2eT8vAGTmfM?si=KJqtW1qE-z45hIyi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 190 até 197" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 4", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 15,16 e 17" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/UGjn_yzYYk8?si=hB-4Y3nCVn0Svsh1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ojvgT62XtpY?si=ZTpNIa3ITYzH0n_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/G8Y2liwGRl8?si=yNc2lG1gccA2VGgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/8qIlSAzfBY4?si=fc1zB-1eCaTVgt8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 198 até 205" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 5", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1222/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ELxGmf9f_ZM?si=Z03TNA6n7fJo_zB6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/bbDliT5EN-w?si=vY1m0U0P-JBnSZj_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/DSA9G8vaXY0?si=GJMcd4MdT341jGDm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/qOYwgKd7VSE?si=3U8PeQTu-opqjRSl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 206 até 213" }
+                    ]},
+                    { day: "Sábado", date: "dia 6", activities: [
+                        { type: "text", content: "Filme (A Barraca do Beijo)" }
+                    ]},
+                    { day: "Domingo", date: "dia 7", activities: [
+                        { type: "text", content: "Filme (Pegando Fogo)" }
+                    ]}
+                ]
+            },
+            {
+                id: 10,
+                title: "SEMANA 10",
+                intro: "Mantendo o ritmo intenso de estudos e filmes.",
+                days: [
+                    { day: "Segunda-feira", date: "dia 8", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1215/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/zN_6g9sj2dg?si=DpIBwKNQeHImNpoZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/3sIxEpO9j0A?si=Cu2ZCNALLxBLjJpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Q2X2iVYPbiI?si=GRI9RRqX0blqtoMl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/4WxnSe94M8Q?si=nQNBkB_Vy8NW-5jK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 214 até 221" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 9", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 18, 19 e 20" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/z5VujwolRxE?si=3vFO6Yc4Kw1vilgH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/OhPRVV78NYk?si=QKQTK1pq-u12EP_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/tCBbGbRvkGo?si=0qMtPyntsQ4JidBp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/pQJlHAZewaY?si=jJy9PARKpYNZ86yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 222 até 229" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 10", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1210/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/FBjWEwkl_s0?si=9PLo2GYnnvHD9Pnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/QkTmAyO_qfE?si=F2hwGurYTkY6X7j3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/QkTmAyO_qfE?si=F2hwGurYTkY6X7j3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/O5bRipHckSQ?si=6OnRtC3Q_ZTzJMD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 230 até 237" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 11", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 21, 22 e 23" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ZwEquW_Yij0?si=59sb6m7DFnCJ9oar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ymiBDged-eQ?si=Fg36XOCu4w4n054y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/PsGkGrUQYys?si=ehTrHUs9bZBdBpeJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/RkDAD0Jb6hU?si=WUVOtRD5VE6l6hdj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 238 até 245" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 12", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1192/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/CfnZOu-T-TE?si=oQMt6tyN9-s6mHSy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/dY1OYkOJ0XI?si=qxyzTQeQRJkdyLei" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/tUpFcYpT8MM?si=IbME-g2u2WVIEnnV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/ZhpHNhlK3KM?si=X39w0AVASmV3T4ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 246 até 253" }
+                    ]},
+                    { day: "Sábado", date: "dia 13", activities: [
+                        { type: "text", content: "Filme (O Lado Bom da Vida)" }
+                    ]},
+                    { day: "Domingo", date: "dia 14", activities: [
+                        { type: "text", content: "Filme (Querido John)" }
+                    ]}
+                ]
+            },
+            {
+                id: 11,
+                title: "SEMANA 11",
+                intro: "Penúltima semana de foco total.",
+                days: [
+                    { day: "Segunda-feira", date: "dia 15", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1162/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/YQOrqAKKcUQ?si=9kfLdXz-zCqJXAyB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/UFdR8w_R1HA?si=nAiRYCStxYIHnbK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/XWwNocaIWxg?si=UfjoznCQVmDXmz9q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/PorwgeWg8Ew?si=dHCpqOc-ZWFOMCeN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 254 até 261" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 16", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 24, 25 e 26" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/KKOTBT0Utv4?si=VS_4Mcv0LesP0nvT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/A6vfZpEyYao?si=z2vjRQf8gjcB9u-b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/EV7ecCvxqy8?si=ZGN9Y6BI4mqS_IOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/-MipU5oa3JM?si=DFNTwTKNIcxtBRqG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 262 até 269" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 17", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1142/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/MjNtj3RN7LI?si=grJaJCreEBZ7rrcK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/0-6FExEfaKE?si=IbnpbQlZt0dU4qMt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/GMP2ifyUeUo?si=w1w-oEZ1U8DyBbUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/wvgWpQHm9nI?si=Bn96DIqFiYtMsH5h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 270 até 277" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 18", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 27, 28 e 29" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1133/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/JCnvVaXEh3Y?si=5KQCGjBHFSdeLnO-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/pZXzLN2miq8?si=-yfCRNERTFAZ_Cxz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/zhjuqTGMaAs?si=9Mi1zYW_dmgRStA_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/XRXWpilGpyg?si=i3X93oaVs9bWqZjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 278 até 285" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 19", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1133/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/nxQYKNqZB70?si=ITWSDV4eQ2-6XZ95" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/m6rcjY8YHJc?si=9TjegQoLa8rQfl2n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/PQVL_0Rp8AU?si=eKC9GzR24CAzvmMm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/brUUb5-LZKU?si=4WEDxVRDYiP2C7jE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 286 até 293" }
+                    ]},
+                    { day: "Sábado", date: "dia 20", activities: [
+                        { type: "text", content: "Filme (Amizade Colorida)" }
+                    ]},
+                    { day: "Domingo", date: "dia 21", activities: [
+                        { type: "text", content: "Filme (Justiça em família)" }
+                    ]}
+                ]
+            },
+            {
+                id: 12,
+                title: "SEMANA 12",
+                intro: "Última semana para atingir a meta!",
+                days: [
+                    { day: "Segunda-feira", date: "dia 22", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1129/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/9-xTH7r_QNQ?si=7c2q8WiIalG4ILhn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/L6Gp3Gv7QbA?si=sM0UoMMbqectc-dX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/L6Gp3Gv7QbA?si=tkJA3mu4GW7boC4m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/L6Gp3Gv7QbA?si=tkJA3mu4GW7boC4m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 294 até 301" }
+                    ]},
+                    { day: "Terça-feira", date: "dia 23", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 30, 31 e 33" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/2zO9sDECeS8?si=oV2edXhImbZYimk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/HA7qCN_MIRw?si=7Sv4fOz2ybP-Fe6F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/yMEc2hlI-Jk?si=MCD1mXpy2q873uiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/zWtQYVt-zHg?si=3FuyDhO9lSlK2F1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "text", content: "40 min gramática ⭐️ pág 302 e 303" }
+                    ]},
+                    { day: "Quarta-feira", date: "dia 24", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1093/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/qNRNFP0qSX0?si=Qb1h-vkXUV5AP31F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/xF_Q2anYOfc?si=Xx9HJgizpQNd88q-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/gT6dPUULwkQ?si=prWq0FGAzokwpifR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/wv_nEUnhFFE?si=VcxuvHObsFGfRxZG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "link", content: "40 min gramática", url: "https://www.englishcoursemalta.com/learn/grammar-test-b1-intermediate/" }
+                    ]},
+                    { day: "Quinta-feira", date: "dia 25", activities: [
+                        { type: "text", content: "40 min manhã 📕 cap 33, 34 e 35" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/-tqeI9t4x9E?si=UPtJBfryHV21FxGB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/EdeZp0n0JHw?si=IUi4koh6e7zYIx9K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/nSg3F-vJ2ZQ?si=yyIVtTEG3OX717gt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/C_hQG67siQ4?si=Pm5SxE7djz2xvkHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "link", content: "40 min gramática", url: "https://www.oxfordonlineenglish.com/english-level-test/grammar" }
+                    ]},
+                    { day: "Sexta-feira", date: "dia 26", activities: [
+                        { type: "text", content: "40 min manhã" },
+                        { type: "link", content: "✍️ Escrita!", url: "https://www.ielts-writing.info/EXAM/ielts_writing_samples_task_2/1074/" },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/yp_tgX15Qzk?si=z6svdJiHyeAJjZgi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/Q_rgIWRFjqI?si=Gu6PDoJ4slHzFlqh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/7wgJQdCvwDM?si=lEF7zE7Z5PQv7mn5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "video", content: "20 min - áudio", embed: '<iframe class="youtube-video" src="https://www.youtube.com/embed/WhlAGh3lQsE?si=V5OXJ35_wuppT5xl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' },
+                        { type: "link", content: "40 min gramática", url: "https://www.youtube.com/watch?v=yp_tgX15Qzk" }
+                    ]},
+                    { day: "Sábado", date: "dia 27", activities: [
+                        { type: "text", content: "Filme (A Mãe)" }
+                    ]},
+                    { day: "Domingo", date: "dia 28", activities: [
+                        { type: "text", content: "Filme (Nunca Mais)" }
+                    ]}
+                ]
+            },
+        ];
+
+        // Função para salvar o estado dos checkboxes no localStorage
+        function saveProgress(weekId, dayIndex, activityIndex, checked) {
+            const key = `progress-week-${weekId}-day-${dayIndex}-activity-${activityIndex}`;
+            localStorage.setItem(key, checked);
+        }
+
+        // Função para carregar o estado dos checkboxes do localStorage
+        function loadProgress(weekId, dayIndex, activityIndex) {
+            const key = `progress-week-${weekId}-day-${dayIndex}-activity-${activityIndex}`;
+            return localStorage.getItem(key) === "true";
+        }
+
+        // Renderiza a tela de introdução
+        function renderIntroScreen() {
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                <div class="header">
+                    <h1 class="text-3xl font-bold">3 Meses Mágicos do Inglês</h1>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold mb-4 text-center text-indigo-800">Seu Plano de Estudos Interativo</h2>
+                    <p class="text-gray-700 mb-6">
+                        Este é o seu plano de estudos para alcançar o nível B1.2 em 12 semanas. O plano é dividido em três fases e você pode acompanhar seu progresso marcando as atividades como concluídas.
+                    </p>
+                    
+                    <div class="mb-6 bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-400">
+                        <h3 class="font-bold text-lg text-indigo-700 mb-2">Estrutura do Plano:</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>
+                                <strong>Semana 1 a 4 (2h/dia):</strong>
+                                <br>Manhã (30min), Noite (30min) e 4 blocos de 15min.
+                            </li>
+                            <li>
+                                <strong>Semana 5 a 8 (3h/dia):</strong>
+                                <br>Manhã (40min), Noite (40min) e 4 blocos de 20min.
+                            </li>
+                            <li>
+                                <strong>Semana 9 a 12 (3h/dia + 2 filmes):</strong>
+                                <br>Manhã (40min), Noite (40min), 4 blocos de 20min e 2 filmes por semana.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="text-center text-gray-600 mb-8">
+                        Ao final, você terá acumulado 330 horas de estudo, com o objetivo de alcançar o nível B1.2.
+                    </p>
+
+                    <div class="flex justify-center">
+                        <button id="start-button" class="btn">Começar</button>
+                    </div>
+                </div>
+            `;
+            // Adiciona o evento de clique para o botão "Começar"
+            document.getElementById('start-button').addEventListener('click', () => {
+                renderWeekList();
+            });
+        }
+
+        // Renderiza a lista de semanas
+        function renderWeekList() {
+            const app = document.getElementById('app');
+            let weekListHtml = `
+                <div class="header">
+                    <h1 class="text-2xl font-bold">Selecione uma Semana</h1>
+                </div>
+                <div class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            `;
+
+            weeks.forEach(week => {
+                weekListHtml += `
+                    <div class="bg-indigo-100 hover:bg-indigo-200 transition-colors cursor-pointer p-4 rounded-lg shadow-md" onclick="renderWeek(${week.id})">
+                        <h3 class="font-bold text-lg text-indigo-800">${week.title}</h3>
+                        <p class="text-sm text-gray-600 mt-1">${week.intro}</p>
+                    </div>
+                `;
+            });
+
+            weekListHtml += `</div>
+            <div class="p-6 flex justify-center">
+                <button class="back-btn" onclick="renderIntroScreen()">Voltar</button>
+            </div>
+            `;
+            app.innerHTML = weekListHtml;
+        }
+
+        // Renderiza o conteúdo de uma semana específica
+        function renderWeek(weekId) {
+            const app = document.getElementById('app');
+            const week = weeks.find(w => w.id === weekId);
+            if (!week) {
+                app.innerHTML = `<div class="p-6 text-center">Semana não encontrada.</div>`;
+                return;
+            }
+
+            let weekContentHtml = `
+                <div class="header">
+                    <h1 class="text-2xl font-bold">${week.title}</h1>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-700 mb-4">${week.intro}</p>
+            `;
+
+            week.days.forEach((day, dayIndex) => {
+                weekContentHtml += `
+                    <div class="card">
+                        <h4 class="card-title">${day.day} (${day.date})</h4>
+                        <ul class="list-none mt-2 space-y-2">
+                `;
+                day.activities.forEach((activity, activityIndex) => {
+                    const isChecked = loadProgress(week.id, dayIndex, activityIndex);
+                    
+                    let activityContent;
+                    if (activity.type === "link") {
+                        activityContent = `<a href="${activity.url}" target="_blank" class="link-btn text-center text-sm px-4 py-2 mt-2 rounded-full inline-block">${activity.content}</a>`;
+                    } else if (activity.type === "video") {
+                        activityContent = `
+                            <span class="activity-content">${activity.content}</span>
+                            <div class="w-full mt-2">${activity.embed}</div>
+                        `;
+                    } else {
+                        activityContent = `<span class="activity-content">${activity.content}</span>`;
+                    }
+
+                    weekContentHtml += `
+                        <li class="card-item">
+                            <input 
+                                type="checkbox" 
+                                id="checkbox-w${week.id}-d${dayIndex}-a${activityIndex}" 
+                                class="form-checkbox h-5 w-5 text-indigo-600 rounded" 
+                                ${isChecked ? 'checked' : ''}
+                                onchange="saveProgress(${week.id}, ${dayIndex}, ${activityIndex}, this.checked)"
+                            >
+                            <label for="checkbox-w${week.id}-d${dayIndex}-a${activityIndex}" class="ml-2 text-gray-800">
+                                ${activityContent}
+                            </label>
+                        </li>
+                    `;
+                });
+                weekContentHtml += `
+                        </ul>
+                    </div>
+                `;
+            });
+
+            weekContentHtml += `
+                </div>
+                <div class="p-6 flex justify-center">
+                    <button class="back-btn" onclick="renderWeekList()">Voltar</button>
+                </div>
+            `;
+            app.innerHTML = weekContentHtml;
+        }
+
+        // Inicia a aplicação na tela de introdução
+        renderIntroScreen();
+
+    </script>
+</body>
+</html>
